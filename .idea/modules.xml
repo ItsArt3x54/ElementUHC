@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ElementUHC.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ElementUHC.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/be.artex.ElementUHC.main.iml" filepath="$PROJECT_DIR$/.idea/modules/be.artex.ElementUHC.main.iml" />
     </modules>
   </component>
 </project>
