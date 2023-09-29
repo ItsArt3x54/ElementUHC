@@ -3,3 +3,7 @@ version: '${version}'
 main: be.artex.elementuhc.ElementUHC
 api-version: '1.20'
 load: STARTUP
+commands:
+  meetup:
+    description: Start a ElementUHC meetup game.
+    usage: /<command>
