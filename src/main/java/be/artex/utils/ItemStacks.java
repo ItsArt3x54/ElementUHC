@@ -1,5 +1,6 @@
 package be.artex.utils;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
@@ -52,21 +53,15 @@ public class ItemStacks {
     }
 
     public static ItemStack gAp() {
-        ItemStack item = new ItemStack(Material.GOLDEN_APPLE, 13);
-
-        return item;
+        return new ItemStack(Material.GOLDEN_APPLE, 13);
     }
 
     public static ItemStack lavaBucket() {
-        ItemStack item = new ItemStack(Material.LAVA_BUCKET);
-
-        return item;
+        return new ItemStack(Material.LAVA_BUCKET);
     }
 
     public static ItemStack goldenCarrot() {
-        ItemStack item = new ItemStack(Material.GOLDEN_CARROT, 64);
-
-        return item;
+        return new ItemStack(Material.GOLDEN_CARROT, 64);
     }
 
     public static ItemStack pickaxe() {
@@ -79,13 +74,19 @@ public class ItemStacks {
     }
 
     public static ItemStack cobbleStone() {
-        ItemStack item = new ItemStack(Material.COBBLESTONE, 64);
-
-        return item;
+        return new ItemStack(Material.COBBLESTONE, 64);
     }
 
     public static ItemStack waterBucket() {
-        ItemStack item = new ItemStack(Material.WATER_BUCKET);
+        return new ItemStack(Material.WATER_BUCKET);
+    }
+
+    public static ItemStack boost() {
+        ItemStack item = new ItemStack(Material.NETHER_STAR);
+        ItemMeta itemMeta = item.getItemMeta();
+        itemMeta.setDisplayName(ChatColor.RESET + "Boost");
+        itemMeta.addEnchant(Enchantment.DURABILITY, 1, false);
+        item.setItemMeta(itemMeta);
 
         return item;
     }

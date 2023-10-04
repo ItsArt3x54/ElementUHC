@@ -19,8 +19,7 @@ public class Nerfs implements Listener {
         double damage = event.getDamage();
 
         ///nerf strength
-        if(edamager instanceof Player) {
-            Player damager = (Player) edamager;
+        if(edamager instanceof Player damager) {
 
             if(damager.hasPotionEffect(PotionEffectType.INCREASE_DAMAGE)) {
                 Collection<PotionEffect> pe = damager.getActivePotionEffects();
@@ -40,8 +39,7 @@ public class Nerfs implements Listener {
         }
 
         ///nerf resistance
-        if(entity instanceof Player) {
-            Player player = (Player) entity;
+        if(entity instanceof Player player) {
 
             if(player.hasPotionEffect(PotionEffectType.DAMAGE_RESISTANCE)) {
                 Collection<PotionEffect> pe = player.getActivePotionEffects();

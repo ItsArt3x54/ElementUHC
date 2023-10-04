@@ -14,8 +14,6 @@ public class Bugs implements Listener {
 
         } else {
 
-            return;
-
         }
 
     }
