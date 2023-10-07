@@ -1,4 +1,4 @@
-package be.artex.roles.role;
+package be.artex.roles.role.solo;
 
 import be.artex.roles.Role;
 import be.artex.utils.ItemStacks;
@@ -27,16 +27,13 @@ public class EtreCorrompuRole extends Role {
 
     @Override
     public String getMessage() {
-        return "- Vous etes " +   ChatColor.GOLD + ChatColor.BOLD + "un etre corrompu.\n" + ChatColor.RESET + "- Vous devez gagner " + ChatColor.GOLD + ChatColor.BOLD + "Tous seul.";
-    }
-
-    @Override
-    protected void addItems(PlayerInventory inventory) {
-        inventory.addItem(ItemStacks.boost());
+        return "- Vous etes " +   ChatColor.GOLD + ChatColor.BOLD + "un etre corrompu.\n" + ChatColor.RESET + "- Vous devez gagner " + ChatColor.GOLD + ChatColor.BOLD + "Tous seul." + ChatColor.RESET + ChatColor.AQUA + ChatColor.BOLD + "\n \n Effets: \n \n" + ChatColor.RED + ChatColor.BOLD + "- Strength 1" + ChatColor.RESET + " Permanent \n" +  ChatColor.AQUA + ChatColor.BOLD + "- Speed 1 " + ChatColor.RESET + " Permanent \n" + ChatColor.GRAY + ChatColor.BOLD + "- Resistance 1" + ChatColor.RESET + " Permanent";
     }
 
     @Override
     protected void addEffects(List<PotionEffect> effects) {
         effects.add(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, Integer.MAX_VALUE,  0));
+        effects.add(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE,  0));
+        effects.add(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, Integer.MAX_VALUE,  0));
     }
 }

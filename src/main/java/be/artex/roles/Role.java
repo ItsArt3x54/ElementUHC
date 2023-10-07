@@ -35,8 +35,13 @@ public abstract class Role implements Listener {
         this.addEffects(effects);
         player.addPotionEffects(effects);
 
+        // Attributes
+        this.addAttributes(player);
+
+        // Send Message
         player.sendMessage(this.getMessage());
 
+        // Internal
         Roles.markPlayerRole(player, this);
 
         this.assignedCount++;
@@ -52,7 +57,11 @@ public abstract class Role implements Listener {
 
     protected void addItems(PlayerInventory inventory) {
     }
+
     protected void addEffects(List<PotionEffect> effects) {
+    }
+
+    protected void addAttributes(Player player) {
     }
 
     public void onNight(Player player) {

@@ -17,9 +17,9 @@ public class ItemStacks {
     }
 
     public static ItemStack helmet() {
-        ItemStack item = new ItemStack(Material.IRON_HELMET);
+        ItemStack item = new ItemStack(Material.DIAMOND_HELMET);
         ItemMeta itemMeta = item.getItemMeta();
-        itemMeta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 3, false);
+        itemMeta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 2, false);
         item.setItemMeta(itemMeta);
 
         return item;
@@ -81,11 +81,11 @@ public class ItemStacks {
         return new ItemStack(Material.WATER_BUCKET);
     }
 
-    public static ItemStack boost() {
-        ItemStack item = new ItemStack(Material.NETHER_STAR);
+    public static ItemStack eauBoots() {
+        ItemStack item = new ItemStack(Material.DIAMOND_BOOTS);
         ItemMeta itemMeta = item.getItemMeta();
-        itemMeta.setDisplayName(ChatColor.RESET + "Boost");
-        itemMeta.addEnchant(Enchantment.DURABILITY, 1, false);
+        itemMeta.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 2, false);
+        itemMeta.addEnchant(Enchantment.DEPTH_STRIDER, 3, false);
         item.setItemMeta(itemMeta);
 
         return item;

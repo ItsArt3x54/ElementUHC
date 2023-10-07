@@ -3,6 +3,7 @@ package be.artex.roles;
 import be.artex.elementuhc.ElementUHC;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
@@ -39,7 +40,7 @@ public final class Roles {
         unMarkPlayer(player.getUniqueId());
     }
 
-    public static Role getPlayerRole(Player player) {
+    public static @Nullable Role getPlayerRole(Player player) {
         String roleId = Roles.savedPlayerRoles.get(player.getUniqueId());
         return Roles.getRole(roleId);
     }
